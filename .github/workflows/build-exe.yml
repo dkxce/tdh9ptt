@@ -1,0 +1,58 @@
+name: Build Windows EXE
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'version.md'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          & "$env:USERPROFILE\.local\bin\poetry" install --no-interaction --no-root
+
+      - name: Create Version File
+        run: |
+          & "$env:USERPROFILE\.local\bin\poetry" run create-version-file sound_bt.yaml --outfile sound_bt.txt
+
+      - name: Build EXE with PyInstaller
+        run: |
+          & "$env:USERPROFILE\.local\bin\poetry" run pyinstaller --clean --version-file="sound_bt.txt" -i "sound_bt.ico" --noconsole --onefile --name="sound_bt" sound_bt/app.py
+          if (Test-Path sound_bt.txt) { Remove-Item sound_bt.txt }
+
+      - name: Compress EXE with UPX
+        run: .\tools\upx.exe -9f dist\sound_bt.exe
+
+      - name: Save EXE to Job Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sound_bt
+          path: dist/sound_bt.exe
+          compression-level: 0
