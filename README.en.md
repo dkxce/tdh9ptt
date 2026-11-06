@@ -1,4 +1,4 @@
-# sound-bt - Bluetooth audio bridge
+# TD-H9 Sound Router - Bluetooth audio bridge
 
 [RU](README.md) | [EN](README.en.md) | [RELEASES](https://github.com/dkxce/tdh9ptt/releases)
 
@@ -8,7 +8,7 @@ Tidradio TD-H9 (and similar) from a Classic Bluetooth computer (SCO/HFP).
 Opportunities:
 
 * choice**entrance**Device (in) - radio microphone on SCO/HFP;
-* choice**weekend**Devices (out) - PC speakers / speakers;
+* choice**weekend**Devices (out) – PC speakers/columns;
 * choice**management**RFCOMM - PTT;
 * switcher**radio**- taking voice from the radio.
 * **Playing file**audio file playback (MP3/WAV/OGG/FLAC/M4A/AAC)
@@ -69,9 +69,9 @@ sound_bt/
 
 ## How it works.
 
-The radio voice is on Classic Bluetooth SCO/HFP. List of audio devices taken
+The voice of the radio is on Classic Bluetooth SCO/HFP. List of audio devices taken
 through`sounddevice`(PortAudio) as full as possible.`StreamRouter`gripping
-live input (headset microphone) at its native frequency and continuously transmits to**standard output**resembling between in and out through`miniaudio.convert_frames`. The built-in PTT detect via RFCOMM determines,
+live input (headset microphone) at its native frequency and continuously transmits to**standard output**Resembling between in and out through`miniaudio.convert_frames`. The built-in PTT detect via RFCOMM determines,
 If you press the transmission key, you read the audio stream from the radio.
 When playing the file`miniaudio`frequency
 Output devices, and channels are reduced to its capabilities.
