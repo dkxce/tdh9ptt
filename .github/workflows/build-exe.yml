@@ -2,7 +2,7 @@ name: Build Windows EXE
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'version.md'
   workflow_dispatch:
