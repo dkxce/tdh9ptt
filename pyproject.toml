@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "sound-bt"
+version = "0.1.0"
+description = "Bluetooth audio bridge: play radio audio and transmit voice/audio via PTT"
+authors = ["dkxce <https://github.com/dkxce/Tidradio-TD-H9>"]
+readme = "README.md"
+packages = [{include = "sound_bt"}]
+
+[tool.poetry.scripts]
+sound-bt = "sound_bt.app:main"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.16"
+numpy = ">=1.26,<2.0"
+sounddevice = "^0.5.6"
+pydub = "^0.25.1"
+miniaudio = "^1.71"
+pyside6 = "^6.12.0"
+pyserial = "^3.5"
+pyinstaller = "^6.22.3"
+pyinstaller-versionfile = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
