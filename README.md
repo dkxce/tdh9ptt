@@ -1,4 +1,4 @@
-# sound-bt — Bluetooth audio bridge
+# TD-H9 Sound Router — Bluetooth audio bridge
 
 [RU](README.md) | [EN](README.en.md) | [RELEASES](https://github.com/dkxce/tdh9ptt/releases)      
 
