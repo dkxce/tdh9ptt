@@ -1,5 +1,7 @@
 # sound-bt — Bluetooth audio bridge
 
+[RU](README.md) | [EN](README.en.md) | [RELEASES](https://github.com/dkxce/tdh9ptt/releases)      
+
 Оконное приложение (PySide6/Qt) для работы с Bluetooth-гарнитурой рации
 Tidradio TD-H9 (и аналогичных) с компьютера по Classic Bluetooth (SCO/HFP).
 
