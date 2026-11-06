@@ -1,0 +1,6 @@
+/.venv
+/__pycache__
+/dist/*.zip
+/build
+/.chat.txt
+/sound_bt/__pycache__
