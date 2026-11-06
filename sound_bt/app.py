@@ -258,7 +258,7 @@ class SoundBtWindow(QMainWindow):
         device lists, load the saved playlist, and start the playback-position
         refresh timer."""
         super().__init__()
-        self.setWindowTitle("TD-H9 Sound Router — Bluetooth audio bridge by dxkce")
+        self.setWindowTitle("TD-H9 Sound Router — Bluetooth audio bridge by dkxce")
         self.resize(740, 380)
 
         # Core workers and playback state.
