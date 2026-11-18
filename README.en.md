@@ -8,7 +8,7 @@ Tidradio TD-H9 (and similar) from a Classic Bluetooth computer (SCO/HFP).
 Opportunities:
 
 * choice**entrance**Device (in) - radio microphone on SCO/HFP;
-* choice**weekend**Devices (out) – PC speakers/columns;
+* choice**weekend**Devices (out) - PC speakers / speakers;
 * choice**management**RFCOMM - PTT;
 * switcher**radio**- taking voice from the radio.
 * **Playing file**audio file playback (MP3/WAV/OGG/FLAC/M4A/AAC)
@@ -85,4 +85,5 @@ Output devices, and channels are reduced to its capabilities.
 **Author**: [dkxcece](https://github.com/dkxce)   
 **Android**: [dkxce/tdh9android](https://github.com/dkxce/tdh9android)   
 **Desktop**: [dkxce/tdh9desktop](https://github.com/dkxce/tdh9desktop)   
+**Widgets**: [dkxce/tdh9apps](https://github.com/dkxce/tdh9apps)   
 **Manual**: [dkxce/Tidradio-TD-H9](https://github.com/dkxce/Tidradio-TD-H9)
